@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bark: #622b14;
+  --color-caramel: #995f2f;
+  --color-sage: #978f66;
+  --color-cream: #e4d6a9;
+  --color-cream-100: #f1e9cf;
+  --color-cream-50: #faf6e8;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  label[for] {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .category-btn {
+    @apply py-1 text-xs text-cream/70 transition-colors [writing-mode:vertical-rl] rotate-180 hover:text-cream
+            aria-current:font-semibold aria-current:text-cream
+            aria-current:underline aria-current:underline-offset-4;
+  }
+}
