@@ -2,9 +2,9 @@ import ProfileMenu from "../ui/ProfileMenu";
 import SearchBar from "../ui/SearchBar";
 import SidebarOpenToggle from "../ui/SidebarOpenToggle";
 
-import profileImage from "/src/assets/images/profile.jpeg";
-import searchIcon from "/src/assets/icons/search.svg";
-import lineIcon from "/src/assets/icons/line.svg";
+import profileImage from "/assets/images/profile.jpeg";
+import searchIcon from "/assets/icons/search.svg";
+import lineIcon from "/assets/icons/line.svg";
 
 function Header() {
   return (

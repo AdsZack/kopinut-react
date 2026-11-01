@@ -19,7 +19,7 @@ function ProfileMenu({ profileImg, profileName }) {
           className="grid size-8 place-items-center rounded-md hover:bg-cream-100 focus-visible:outline-2 focus-visible:outline-caramel"
         >
           <img
-            src="src/assets/icons/dropdown.svg"
+            src="/assets/icons/dropdown.svg"
             alt="dropdown"
             className="size-6"
           />

@@ -1,7 +1,7 @@
 import CategoryButton from "../ui/CategoryButton";
 import SidebarCloseToggle from "../ui/SidebarCloseToggle";
 
-import chevronIcon from "/src/assets/icons/chevron-left-dot.svg";
+import chevronIcon from "/assets/icons/chevron-left-dot.svg";
 
 function Sidebar() {
   return (
