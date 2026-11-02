@@ -11,6 +11,8 @@ function Main({
   onSelectSubcategory,
   query,
   onQueryChange,
+  isSidebarOpen,
+  onOpenSidebar,
 }) {
   return (
     <>
@@ -18,6 +20,8 @@ function Main({
         categoryLabel={categoryLabel}
         query={query}
         onQueryChange={onQueryChange}
+        isSidebarOpen={isSidebarOpen}
+        onOpenSidebar={onOpenSidebar}
       />
       <MenuSection
         menus={menus}

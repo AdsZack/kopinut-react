@@ -6,11 +6,19 @@ import profileImage from "/assets/profile.jpeg";
 import searchIcon from "/assets/icons/search.svg";
 import lineIcon from "/assets/icons/line.svg";
 
-function Header({ categoryLabel, query, onQueryChange }) {
+function Header({
+  categoryLabel,
+  query,
+  onQueryChange,
+  isSidebarOpen,
+  onOpenSidebar,
+}) {
   return (
     <header className="flex items-center justify-between gap-4 px-4">
       <div className="flex min-w-0 flex-1 items-center gap-5">
-        <SidebarOpenToggle srcIcon={lineIcon} />
+        {!isSidebarOpen && (
+          <SidebarOpenToggle srcIcon={lineIcon} onClick={onOpenSidebar} />
+        )}
         <h1 className="w-28 shrink-0 text-2xl font-bold">{categoryLabel}</h1>
         <SearchBar
           srcIcon={searchIcon}

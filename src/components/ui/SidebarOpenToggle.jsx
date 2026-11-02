@@ -1,12 +1,12 @@
-function SidebarOpenToggle({ srcIcon }) {
+function SidebarOpenToggle({ srcIcon, onClick }) {
   return (
     <button
-      id="sidebar-open"
       type="button"
-      className="grid size-8 shrink-0 place-items-center rounded-md hover:bg-cream-100 focus-visible:outline-2 focus-visible:outline-caramel"
+      onClick={onClick}
       aria-label="Open categories"
-      aria-controls="sidebar"
       aria-expanded="false"
+      aria-controls="sidebar"
+      className="grid size-8 shrink-0 place-items-center rounded-md hover:bg-cream-100 focus-visible:outline-2 focus-visible:outline-caramel"
     >
       <img src={srcIcon} className="size-6" />
     </button>

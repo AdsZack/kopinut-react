@@ -1,4 +1,4 @@
-function SidebarCloseToggle({ srcIcon }) {
+function SidebarCloseToggle({ srcIcon, onClick }) {
   return (
     <button
       id="sidebar-close"
@@ -7,6 +7,7 @@ function SidebarCloseToggle({ srcIcon }) {
       aria-label="Close categories"
       aria-expanded="true"
       aria-controls="sidebar"
+      onClick={onClick}
     >
       <img src={srcIcon} className="size-6" alt="" />
     </button>

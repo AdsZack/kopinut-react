@@ -31,13 +31,21 @@ function App() {
   const visibleMenus = filterByQuery(subcategoryMenus, query);
 
   const activeCategoryData = categories.find((c) => c.id === activeCategory);
-
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   return (
-    <div className="grid h-screen grid-cols-[50px_minmax(0,1fr)] overflow-hidden">
+    <div
+      className={`grid h-screen overflow-hidden transition-[grid-template-columns] bg-bark duration-200 ${
+        isSidebarOpen
+          ? "grid-cols-[50px_minmax(0,1fr)]"
+          : "grid-cols-[0px_minmax(0,1fr)]"
+      }`}
+    >
       <Sidebar
         categories={categories}
         activeCategory={activeCategory}
         onSelectCategory={handleSelectCategory}
+        isOpen={isSidebarOpen}
+        onClose={() => setIsSidebarOpen(false)}
       />
       <div className="grid min-h-0 grid-rows-[64px_minmax(0,1fr)] rounded-l-4xl bg-cream-50 pt-2">
         <Main
@@ -50,6 +58,8 @@ function App() {
           onSelectSubcategory={setActiveSubcategory}
           query={query}
           onQueryChange={setQuery}
+          isSidebarOpen={isSidebarOpen}
+          onOpenSidebar={() => setIsSidebarOpen(true)}
         />
       </div>
     </div>
