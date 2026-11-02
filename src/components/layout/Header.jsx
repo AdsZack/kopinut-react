@@ -2,7 +2,7 @@ import ProfileMenu from "../ui/ProfileMenu";
 import SearchBar from "../ui/SearchBar";
 import SidebarOpenToggle from "../ui/SidebarOpenToggle";
 
-import profileImage from "/assets/images/profile.jpeg";
+import profileImage from "/assets/profile.jpeg";
 import searchIcon from "/assets/icons/search.svg";
 import lineIcon from "/assets/icons/line.svg";
 

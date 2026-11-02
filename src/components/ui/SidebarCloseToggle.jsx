@@ -8,7 +8,7 @@ function SidebarCloseToggle({ srcIcon }) {
       aria-expanded="true"
       aria-controls="sidebar"
     >
-      <img src={srcIcon} class="size-6" alt="" />
+      <img src={srcIcon} className="size-6" alt="" />
     </button>
   );
 }

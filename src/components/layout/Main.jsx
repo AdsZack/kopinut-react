@@ -1,11 +1,11 @@
 import MenuSection from "../menu/MenuSection";
 import Header from "./Header";
 
-function Main() {
+function Main({ menus, loading, error }) {
   return (
     <>
       <Header />
-      <MenuSection />
+      <MenuSection menus={menus} loading={loading} error={error} />
     </>
   );
 }

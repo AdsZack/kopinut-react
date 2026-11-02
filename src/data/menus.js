@@ -1,9 +1,7 @@
-const API_URL = "http://localhost:3000/api";
+const API_URL = import.meta.env.VITE_API_URL;
 
-export let menus = [];
-
-export async function loadMenus() {
-  const res = await fetch(`${API_URL}/products`);
+export async function loadMenus(signal) {
+  const res = await fetch(`${API_URL}/menus`, { signal });
   if (!res.ok) throw new Error("Failed load menu");
-  menus = await res.json();
+  return res.json();
 }
