@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-function ProfileMenu({ profileImg, profileName }) {
+function ProfileMenu({ profileImg, profileName, onLogout }) {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef(null);
 
@@ -52,7 +52,7 @@ function ProfileMenu({ profileImg, profileName }) {
         >
           <button
             type="button"
-            onClick={() => setIsOpen(false)}
+            onClick={onLogout}
             className="w-full rounded-md px-3 py-2 text-left text-sm hover:bg-cream-100 focus-visible:outline-2 focus-visible:outline-caramel"
           >
             Logout

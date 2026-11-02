@@ -12,6 +12,8 @@ function Header({
   onQueryChange,
   isSidebarOpen,
   onOpenSidebar,
+  user,
+  onLogout,
 }) {
   return (
     <header className="flex items-center justify-between gap-4 px-4">
@@ -26,7 +28,11 @@ function Header({
           onChange={onQueryChange}
         />
       </div>
-      <ProfileMenu profileImg={profileImage} profileName="Cashier" />
+      <ProfileMenu
+        profileImg={profileImage}
+        profileName={user.username}
+        onLogout={onLogout}
+      />
     </header>
   );
 }

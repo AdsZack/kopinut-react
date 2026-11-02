@@ -1,5 +1,9 @@
 import { formatRupiah } from "../../utils/formatRupiah";
 
+const iconBtn =
+  "grid size-7 place-items-center rounded-md text-bark transition-colors " +
+  "hover:bg-cream-100 focus-visible:outline-2 focus-visible:outline-caramel";
+
 function CartItem({ item, onIncrease, onDecrease }) {
   return (
     <li className="flex items-center justify-between gap-2 rounded-lg bg-white p-2">
@@ -11,6 +15,7 @@ function CartItem({ item, onIncrease, onDecrease }) {
         <button
           type="button"
           onClick={onDecrease}
+          className={iconBtn}
           aria-label={`Kurangi ${item.name}`}
         >
           −
@@ -19,6 +24,7 @@ function CartItem({ item, onIncrease, onDecrease }) {
         <button
           type="button"
           onClick={onIncrease}
+          className={iconBtn}
           aria-label={`Tambah ${item.name}`}
         >
           +

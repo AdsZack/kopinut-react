@@ -6,7 +6,14 @@ function CheckoutCard({ cart }) {
   return (
     <div className="flex min-h-0 flex-col gap-3 rounded-2xl border border-cream bg-cream-50 p-4 shadow-sm">
       <div className="flex items-center justify-between">
-        <h3 className="text-lg font-bold">Order #123</h3>
+        <h3 className="text-lg font-bold">
+          {cart.lastOrder ? `Order #${cart.lastOrder.orderNumber}` : "Order #0"}
+        </h3>
+        {cart.submitError && (
+          <p role="alert" className="text-sm text-red-600">
+            {cart.submitError}
+          </p>
+        )}
         <button
           type="button"
           onClick={cart.clear}
@@ -41,10 +48,11 @@ function CheckoutCard({ cart }) {
 
       <button
         type="button"
-        disabled={cart.isEmpty}
+        onClick={cart.checkout}
+        disabled={cart.isEmpty || cart.submitting}
         className="h-11 w-full rounded-lg bg-caramel font-bold text-white transition-colors hover:bg-bark disabled:cursor-not-allowed disabled:bg-cream disabled:text-bark/40"
       >
-        Print Receipts
+        {cart.submitting ? "Menyimpan..." : "Print Receipts"}
       </button>
     </div>
   );

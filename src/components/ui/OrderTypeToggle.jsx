@@ -1,6 +1,6 @@
 const OPTIONS = [
-  { value: "dine-in", label: "Dine In" },
-  { value: "take-away", label: "Take Away" },
+  { value: "dine_in", label: "Dine In" },
+  { value: "take_away", label: "Take Away" },
 ];
 
 function OrderTypeToggle({ value, onChange }) {

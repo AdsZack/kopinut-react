@@ -14,6 +14,8 @@ function Main({
   isSidebarOpen,
   onOpenSidebar,
   cart,
+  user,
+  onLogout,
 }) {
   return (
     <>
@@ -23,6 +25,8 @@ function Main({
         onQueryChange={onQueryChange}
         isSidebarOpen={isSidebarOpen}
         onOpenSidebar={onOpenSidebar}
+        user={user}
+        onLogout={onLogout}
       />
       <MenuSection
         menus={menus}
