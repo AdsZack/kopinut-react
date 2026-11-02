@@ -1,4 +1,4 @@
-function MenuCard({ menu }) {
+function MenuCard({ menu, onAdd }) {
   const price = new Intl.NumberFormat("id-ID", {
     style: "currency",
     currency: "IDR",
@@ -20,6 +20,7 @@ function MenuCard({ menu }) {
       </div>
       <button
         type="button"
+        onClick={onAdd}
         className="mt-auto h-9 w-full rounded-lg bg-caramel text-sm font-semibold text-white
                 transition-colors hover:bg-bark active:scale-[0.98]
                 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-caramel"

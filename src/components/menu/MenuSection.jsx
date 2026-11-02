@@ -9,6 +9,7 @@ function MenuSection({
   subcategories,
   activeSubcategory,
   onSelectSubcategory,
+  cart,
 }) {
   return (
     <div className="grid min-h-0 min-w-0 grid-cols-[minmax(0,1fr)_minmax(340px,420px)] gap-4 p-4">
@@ -18,9 +19,14 @@ function MenuSection({
           activeSubcategory={activeSubcategory}
           onSelectSubcategory={onSelectSubcategory}
         />
-        <MenuList menus={menus} loading={loading} error={error} />
+        <MenuList
+          menus={menus}
+          loading={loading}
+          error={error}
+          onAdd={cart.addItem}
+        />
       </div>
-      <CheckoutCard />
+      <CheckoutCard cart={cart} />
     </div>
   );
 }

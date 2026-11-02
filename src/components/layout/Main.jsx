@@ -13,6 +13,7 @@ function Main({
   onQueryChange,
   isSidebarOpen,
   onOpenSidebar,
+  cart,
 }) {
   return (
     <>
@@ -30,6 +31,7 @@ function Main({
         subcategories={subcategories}
         activeSubcategory={activeSubcategory}
         onSelectSubcategory={onSelectSubcategory}
+        cart={cart}
       />
     </>
   );

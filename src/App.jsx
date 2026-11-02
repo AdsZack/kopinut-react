@@ -9,6 +9,7 @@ import {
   filterBySubcategory,
   getSubcategories,
 } from "./utils/menuFilters";
+import { useCart } from "./hooks/useCart";
 
 function App() {
   const { menus, loading, error } = useMenus();
@@ -32,6 +33,9 @@ function App() {
 
   const activeCategoryData = categories.find((c) => c.id === activeCategory);
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+  const cart = useCart();
+
   return (
     <div
       className={`grid h-screen overflow-hidden transition-[grid-template-columns] bg-bark duration-200 ${
@@ -60,6 +64,7 @@ function App() {
           onQueryChange={setQuery}
           isSidebarOpen={isSidebarOpen}
           onOpenSidebar={() => setIsSidebarOpen(true)}
+          cart={cart}
         />
       </div>
     </div>
