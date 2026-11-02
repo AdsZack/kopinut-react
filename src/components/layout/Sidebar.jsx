@@ -3,7 +3,7 @@ import SidebarCloseToggle from "../ui/SidebarCloseToggle";
 
 import chevronIcon from "/assets/icons/chevron-left-dot.svg";
 
-function Sidebar() {
+function Sidebar({ categories, activeCategory, onSelectCategory }) {
   return (
     <aside
       id="sidebar"
@@ -15,12 +15,14 @@ function Sidebar() {
         id="category-list"
         className="flex min-h-0 w-full flex-1 flex-col items-center gap-8 justify-center"
       >
-        <CategoryButton label="Dessert" />
-        <CategoryButton label="Meal" />
-        <CategoryButton label="Snack" />
-        <CategoryButton label="Tea" />
-        <CategoryButton label="Juice" />
-        <CategoryButton label="Coffee" />
+        {categories.map((category) => (
+          <CategoryButton
+            key={category.id}
+            label={category.label}
+            active={category.id === activeCategory}
+            onClick={() => onSelectCategory(category.id)}
+          />
+        ))}
       </div>
     </aside>
   );

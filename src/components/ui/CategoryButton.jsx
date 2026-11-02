@@ -1,8 +1,9 @@
-function CategoryButton({ label }) {
+function CategoryButton({ label, active, onClick }) {
   return (
     <button
       type="button"
-      data-category={label.toLowerCase()}
+      onClick={onClick}
+      aria-current={active ? "true" : undefined}
       className="category-btn"
     >
       {label}

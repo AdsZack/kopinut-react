@@ -20,10 +20,10 @@ function MenuCard({ menu }) {
       </div>
       <button
         type="button"
-        class="add-to-cart mt-auto h-9 w-full rounded-lg bg-caramel text-sm font-semibold text-white
+        className="mt-auto h-9 w-full rounded-lg bg-caramel text-sm font-semibold text-white
                 transition-colors hover:bg-bark active:scale-[0.98]
                 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-caramel"
-        aria-label="Add ${menu.name} to cart"
+        aria-label={`Add ${menu.name} to cart`}
       >
         Add to cart
       </button>

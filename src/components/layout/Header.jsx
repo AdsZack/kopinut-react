@@ -6,15 +6,17 @@ import profileImage from "/assets/profile.jpeg";
 import searchIcon from "/assets/icons/search.svg";
 import lineIcon from "/assets/icons/line.svg";
 
-function Header() {
+function Header({ categoryLabel, query, onQueryChange }) {
   return (
-    <header className="flex gap-4 justify-between px-4 items-center">
+    <header className="flex items-center justify-between gap-4 px-4">
       <div className="flex min-w-0 flex-1 items-center gap-5">
         <SidebarOpenToggle srcIcon={lineIcon} />
-        <h1 id="category-title" className="w-28 shrink-0 text-2xl font-bold">
-          Coffee
-        </h1>
-        <SearchBar srcIcon={searchIcon} />
+        <h1 className="w-28 shrink-0 text-2xl font-bold">{categoryLabel}</h1>
+        <SearchBar
+          srcIcon={searchIcon}
+          value={query}
+          onChange={onQueryChange}
+        />
       </div>
       <ProfileMenu profileImg={profileImage} profileName="Cashier" />
     </header>
