@@ -1,16 +1,9 @@
-# React + Vite
+Web-based Point of Sale (POS) application designed to streamline coffee shop operations and order management.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The application provides features for browsing and searching menu items, adding products to the shopping cart, managing customer orders, and generating printed receipts.
 
-Currently, two official plugins are available:
+Built the frontend using **React** and **Tailwind CSS**, with **Node.js** and **Express.js** for backend development, and **PostgreSQL** for relational data management.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Focused on developing interactive user interfaces, implementing frontend-backend integration through RESTful APIs, and managing application data using a relational database.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Technologies:** React, Tailwind CSS, Node.js, Express.js, PostgreSQL.
