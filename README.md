@@ -1,4 +1,4 @@
-#Kopinut POS
+## Kopinut POS
 Web-based Point of Sale (POS) application designed to streamline coffee shop operations and order management.
 
 The application provides features for browsing and searching menu items, adding products to the shopping cart, managing customer orders, and generating printed receipts.
